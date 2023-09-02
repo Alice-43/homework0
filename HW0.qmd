@@ -1,0 +1,36 @@
+---
+title: "BST 260 Homework 0"
+author: "Alice Li"
+format: html
+execute:
+    echo: false
+---
+
+### Define a, b, c and show the equation
+$f(x)=ax^2 + bx + c =0$
+```{r}
+a <- 1
+b <- 3
+c <- 2
+sprintf("The equation is: f(x) = %dx^2+(%dx)+(%d) = 0", a, b, c)
+```
+
+### Numeric Result
+```{r}
+(-b + sqrt(b^2 - 4*a*c))/(2*a)
+(-b - sqrt(b^2 - 4*a*c))/(2*a)
+```
+
+If there are two unique results, those two results are the two solutions.
+If the two results are same, the number is the only one solution for the problem.
+If the answer is "NAN", the equation have 0 solution.
+
+### Plot Result
+```{r}
+x <- seq(-5, 5, length =300)
+plot(x, a*x^2 + b*x + c, type = "l")
+abline(h = 0, lty = 2)
+```
+
+The intersetions of quadratic line and the dashed straight line are the solutions for the equation.
+
